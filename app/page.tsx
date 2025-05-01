@@ -1,7 +1,3 @@
-import { BlogPosts } from 'app/components/posts'
-import { ProjectsInfo } from 'app/components/projects';
-import { Education } from 'app/components/education';
-import { Experience } from './components/experience';
 import Image from 'next/image';
 
 export default function Page() {
@@ -31,7 +27,11 @@ export default function Page() {
           </p>
         </div>
       </div>
-      <div><p></p></div>
+      <div>
+        <p>
+              
+        </p>
+        </div>
       <div className="flex flex-col md:flex-row gap-8 items-start">
         <p className="text-lg leading-relaxed">
             Recent Master's graduate in Health Data Science with a strong foundation in Computer Science. 
@@ -40,21 +40,6 @@ export default function Page() {
           </p>
       </div>
 
-      <div className="my-8">
-        <ProjectsInfo />
-      </div>
-
-      <div className="my-8">
-        <Experience />
-      </div>
-
-      <div className="my-8">
-        <Education />
-      </div>
-      
-      <div className="my-8">
-        <BlogPosts />
-      </div>
     </section>
   )
 }

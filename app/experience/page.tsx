@@ -1,8 +1,8 @@
 import { ExperienceInfo } from "app/components/experience"
 
 export const metadata = {
-  title: 'Projects',
-  description: 'Read my projects.',
+  title: 'Experiences',
+  description: 'Read my experiences.',
 }
 
 export default function Page() {

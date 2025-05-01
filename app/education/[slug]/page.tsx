@@ -4,22 +4,22 @@ import { getEducationInfo } from 'app/education/utils'
 import { baseUrl } from 'app/sitemap'
 
 export async function generateStaticParams() {
-  const projects = getEducationInfo()
-  return projects.map((project) => ({
-    slug: project.slug,
+  const educations = getEducationInfo()
+  return educations.map((education) => ({
+    slug: education.slug,
   }))
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = getEducationInfo().find((p) => p.slug === params.slug)
-  if (!project) return {}
+  const education = getEducationInfo().find((p) => p.slug === params.slug)
+  if (!education) return {}
 
   const {
     name: title,
     grade: description,
     image,
     period: publishedTime
-  } = project.metadata
+  } = education.metadata
   const ogImage = image ? image : `${baseUrl}/og?title=${encodeURIComponent(title)}`
 
   return {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description,
       type: 'article',
       publishedTime,
-      url: `${baseUrl}/projects/${project.slug}`,
+      url: `${baseUrl}/educations/${education.slug}`,
       images: [{ url: ogImage }],
     },
     twitter: {
@@ -42,9 +42,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function Project({ params }: { params: { slug: string } }) {
-  const project = getEducationInfo().find((p) => p.slug === params.slug)
-  if (!project) notFound()
+export default async function Education({ params }: { params: { slug: string } }) {
+  const education = getEducationInfo().find((p) => p.slug === params.slug)
+  if (!education) notFound()
 
   return (
     <section>
@@ -54,11 +54,11 @@ export default async function Project({ params }: { params: { slug: string } }) 
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'Project',
-            name: project.metadata.name,
-            dateCreated: project.metadata.period.split('-')[0],
-            description: project.metadata.grade,
-            url: `${baseUrl}/projects/${project.slug}`,
+            '@type': 'Education',
+            name: education.metadata.name,
+            dateCreated: education.metadata.period.split('-')[0],
+            description: education.metadata.grade,
+            url: `${baseUrl}/educations/${education.slug}`,
             author: {
               '@type': 'Person',
               name: 'My Portfolio',
@@ -68,26 +68,26 @@ export default async function Project({ params }: { params: { slug: string } }) 
       />
       
       <h1 className="title font-semibold text-2xl tracking-tighter">
-        {project.metadata.name}
+        {education.metadata.name}
       </h1>
       
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-neutral-600 dark:text-neutral-400">
-          {project.metadata.period}
+          {education.metadata.period}
         </p>
       </div>
 
       <div className="mb-8">
         <h2 className="font-medium text-lg mb-2">Grade</h2>
         <p className="text-neutral-700 dark:text-neutral-300">
-          {project.metadata.grade}
+          {education.metadata.grade}
         </p>
       </div>
 
       <div className="mb-8">
         <h2 className="font-medium text-lg mb-2">Modules</h2>
         <ul className="list-disc pl-5 space-y-1">
-          {project.metadata.modules.map((contribution, i) => (
+          {education.metadata.modules.map((contribution, i) => (
             <li key={i}>{contribution}</li>
           ))}
         </ul>
@@ -96,7 +96,7 @@ export default async function Project({ params }: { params: { slug: string } }) 
       <div className="mb-8">
         <h2 className="font-medium text-lg mb-2">Technologies Used</h2>
         <div className="flex flex-wrap gap-2">
-          {project.metadata.technologies.map((tech) => (
+          {education.metadata.technologies.map((tech) => (
             <span 
               key={tech}
               className="bg-neutral-100 dark:bg-neutral-700 px-3 py-1 rounded-full text-sm"
@@ -108,7 +108,7 @@ export default async function Project({ params }: { params: { slug: string } }) 
       </div>
 
       <article className="prose">
-        <CustomMDX source={project.content} />
+        <CustomMDX source={education.content} />
       </article>
     </section>
   )

@@ -1,5 +1,5 @@
 import { BlogPosts } from 'app/components/posts'
-import { Projects } from 'app/components/projects';
+import { ProjectsInfo } from 'app/components/projects';
 import { Education } from 'app/components/education';
 import { Experience } from './components/experience';
 import Image from 'next/image';
@@ -41,7 +41,7 @@ export default function Page() {
       </div>
 
       <div className="my-8">
-        <Projects />
+        <ProjectsInfo />
       </div>
 
       <div className="my-8">

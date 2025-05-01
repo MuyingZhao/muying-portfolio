@@ -1,0 +1,31 @@
+---
+title: 'AWS Solution Architect - Assocaite Learning - S3'
+publishedAt: '2025-04-08'
+summary: 'SIMPLE STORAGE SERVICE (S3)'
+---
+
+S3 is a global object storage platform - regional based/resilient
+
+## S3 Security (Resource Policies & ACLs)
+
+S3 is private by default. 2 common uses for bucket policies: 1)grant access to other AWS accounts; 2)anonymous access to a bucket
+
+To identify if a policy is a resource policy or an identity policy: the presence of this principal component. (It’s there=>resource policy) To do cross account access: 1) the identity in their account is able to access S3 in general(identity policy), 2) your bucket policy needs to allow access from that identity
+
+## Object Versioning & MFA Delete
+
+Object Versioning: 1) can’t be switched off - only suspended; 2) Space is consumed by all versions; 3) you are billed for all versions; 4) only way to 0 costs - is to delete the whole bucket. (Objects aren't deleted - object deletion markers are put in place to hide objects.)
+
+MFA Delete: 1) Enabled in versioning configuration; 2) MFA is required to change bucket versioning state; 3) MFA is required to delete versions; 4) Serial number(MFA) + Code passed with API CALLS
+
+## S3 Object Encryption CSE/SSE
+
+Choose SSE-C when you absolutely need to manage your own keys and happy to allow S3 to perform the encryption and decryption process.
+
+Don’t use SSE-S3(AES256, the default) when:1) in an environment which is strongly regulated, where you need to control the keys used and control access to the keys 2)need to control rotation of keys 3)need role separation
+
+SSE-KMS is nice for role separation
+
+## Conclusion
+
+Amazon Simple Storage Service (S3) Multi-Region Access Points provide a global endpoint for routing Amazon S3 request traffic between AWS Regions. Each global endpoint routes Amazon S3 data request traffic from multiple sources, including traffic originating in Amazon Virtual Private Clouds (VPCs), from on-premises data centers over AWS PrivateLink, and from the public internet without building complex networking configurations with separate endpoints

@@ -2,13 +2,10 @@ import Image from 'next/image';
 
 export default function Page() {
   return (
-    <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        Muying Zhao Portfolio
-      </h1>
+    <section className="space-y-8">
       <div className="flex flex-col md:flex-row gap-8 items-start">
         {/* Image - now smaller */}
-        <div className="w-full md:w-1/3"> {/* Reduced from md:w-1/2 */}
+        <div className="w-full md:w-1/5"> {/* Reduced from md:w-1/2 */}
           <Image
             src="/my-photo.jpg"
             width={1080}
@@ -19,24 +16,23 @@ export default function Page() {
         </div>
         
         {/* Text - now takes more space */}
-        <div className="w-full md:w-2/3"> {/* Increased from md:w-1/2 */}
+        <div className="w-full md:w-2/3 text"> {/* Increased from md:w-1/2 */}
           <p className="text-lg leading-relaxed">
-            Recent Master's graduate in Health Data Science with a strong foundation in Computer Science. 
-            Proficient in Python, R, Java, and multiple software development tools. Experienced in machine learning, 
-            data analysis, and software engineering.
+            Muying Zhao
+          </p>
+          <p className="text-lg leading-relaxed">
+            muying.zhao31@gmail.com
+          </p>
+          <p className="text-lg leading-relaxed">
+            Fake it till you make it!
           </p>
         </div>
       </div>
-      <div>
-        <p>
-              
-        </p>
-        </div>
+     
       <div className="flex flex-col md:flex-row gap-8 items-start">
         <p className="text-lg leading-relaxed">
-            Recent Master's graduate in Health Data Science with a strong foundation in Computer Science. 
-            Proficient in Python, R, Java, and multiple software development tools. Experienced in machine learning, 
-            data analysis, and software engineering.
+        Aspiring Software Developer with a strong foundation in full-stack development, data engineering, and machine learning. Experienced in building scalable systems, designing ETL pipelines, and developing interactive web applications. Skilled in Python, Java, JavaScript, SQL, and cloud technologies (AWS, Huawei Cloud). Passionate about writing clean, efficient code and solving complex problems through software developing and engineering.
+
           </p>
       </div>
 

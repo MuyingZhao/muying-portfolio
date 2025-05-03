@@ -5,19 +5,19 @@ import { usePathname } from 'next/navigation' // Required for active state detec
 
 const navItems = {
   '/': {
-    name: 'HOME',
+    name: 'About Me',
   },
   '/projects': {
-    name: 'PROJECTS'
+    name: 'Projects'
   },
   '/experience': {
-    name: 'EXPERIENCE'
+    name: 'Experience'
   },
   '/education': {
-    name: 'EDUCATION'
+    name: 'Education'
   },
   '/blog': {
-    name: 'BLOG',
+    name: 'Blog',
   },
 }
 
@@ -25,10 +25,10 @@ export function Navbar() {
   const pathname = usePathname() // Gets current route path
 
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight">
+    <aside className="-ml-[8px] mb-8 tracking-tight">
       <div className="lg:sticky lg:top-20">
         <nav
-          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative bg-gradient-to-r from-orange-600 to-orange-400"
+          className="flex flex-row items-start relative px-4 pb-1 pt-1 fade md:overflow-auto scroll-pr-8 md:relative bg-gray-600"
           id="nav"
         >
           <div className="flex flex-row space-x-0 pr-10">
@@ -40,10 +40,10 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  className={`transition-all flex align-middle relative py-1 px-2 m-1 ${
+                  className={`transition-all flex align-middle relative py-1 px-4 m-1 text-white text-lg ${
                     isActive 
-                      ? 'text-white font-bold bg-orange-800 dark:bg-orange-800' 
-                      : 'text-neutral-200 hover:text-white dark:text-neutral-300 dark:hover:text-white'
+                    ? 'text-white font-bold underline underline-offset-4 decoration-2' 
+                    : 'text-neutral-200 hover:text-white dark:text-neutral-300 dark:hover:text-white hover:underline hover:underline-offset-4 hover:decoration-2'
                   }`}
                 >
                   {name}

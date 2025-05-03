@@ -26,8 +26,8 @@ export default function Footer() {
             target="_blank"
             href="https://www.linkedin.com/in/muying-zhao-0bb609292/"
           >
-            <ArrowIcon />
-            <p className="ml-2 h-7">LinkedIn</p>
+            <ArrowIcon /> 
+            <p className="ml-2 h-7 text-green-800">LinkedIn</p> {/* Green text */}
           </a>
         </li>
         <li>
@@ -38,7 +38,7 @@ export default function Footer() {
             href="https://github.com/MuyingZhao"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">Github</p>
+            <p className="ml-2 h-7 text-green-800">Github</p>
           </a>
         </li>
         <li>
@@ -49,7 +49,7 @@ export default function Footer() {
             href="https://github.com/MuyingZhao/muying-portfolio"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">Code Source</p>
+            <p className="ml-2 h-7 text-green-800">Code Source</p>
           </a>
         </li>
       </ul>

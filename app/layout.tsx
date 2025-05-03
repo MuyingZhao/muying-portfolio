@@ -52,10 +52,21 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-4xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+      <body className="antialiased min-h-screen">
+        <main className="flex-auto min-w-0 flex flex-col">
+          {/* Green Header */}
+      <header className="w-full bg-green-600 py-8 md:py-8 shadow-md">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white">
+            Welcome to Muying Personal Website
+          </h1>
+          <p className="mt-4 text-lg text-green-100 max-w-2xl mx-auto">
+            Passionate about creating amazing things
+          </p>
+        </div>
+      </header>
           <Navbar />
-          <div className="mx-auto max-w-4xl px-4">
+          <div className="mx-auto w-full px-16">
           {children}
           <Footer />
           </div>

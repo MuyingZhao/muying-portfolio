@@ -33,7 +33,7 @@ export function EducationInfo() {
               {education.metadata.technologies.map((tech) => (
                 <span 
                   key={tech}
-                  className="text-xs bg-orange-300 dark:bg-neutral-700 px-2 py-1 rounded"
+                  className="text-xs bg-green-600 dark:bg-neutral-700 px-2 py-1 rounded"
                 >
                   {tech}
                 </span>

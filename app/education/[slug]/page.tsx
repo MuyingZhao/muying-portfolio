@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description,
       type: 'article',
       publishedTime,
-      url: `${baseUrl}/educations/${education.slug}`,
+      url: `${baseUrl}/education/${education.slug}`,
       images: [{ url: ogImage }],
     },
     twitter: {

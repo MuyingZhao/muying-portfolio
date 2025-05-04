@@ -5,7 +5,7 @@ export default function Page() {
     <section className="space-y-4">
       <div className="flex flex-col md:flex-row gap-20 items-start">
         {/* Image - now smaller */}
-        <div className="w-full md:w-1/8 pt-6"> {/* Reduced from md:w-1/2 */}
+        <div className="w-full md:w-1/4 pt-6"> {/* Reduced from md:w-1/2 */}
           <Image
             src="/my-photo.jpg"
             width={1080}

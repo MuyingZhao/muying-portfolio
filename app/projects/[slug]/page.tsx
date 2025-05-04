@@ -10,7 +10,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const project = getProjectsInfo().find((p) => p.slug === params.slug)
   if (!project) return {}
 
@@ -42,7 +43,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function Project({ params }: { params: { slug: string } }) {
+export default async function Project(props) {
+  const params = await props.params;
   const project = getProjectsInfo().find((p) => p.slug === params.slug)
   if (!project) notFound()
 

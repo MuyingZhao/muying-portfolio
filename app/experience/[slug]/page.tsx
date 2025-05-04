@@ -10,7 +10,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const experience = getExperienceInfo().find((p) => p.slug === params.slug)
   if (!experience) return {}
 
@@ -42,7 +43,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function Experience({ params }: { params: { slug: string } }) {
+export default async function Experience(props) {
+  const params = await props.params;
   const experience = getExperienceInfo().find((p) => p.slug === params.slug)
   if (!experience) notFound()
 

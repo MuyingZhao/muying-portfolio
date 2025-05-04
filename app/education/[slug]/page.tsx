@@ -10,7 +10,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const education = getEducationInfo().find((p) => p.slug === params.slug)
   if (!education) return {}
 
@@ -42,7 +43,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function Education({ params }: { params: { slug: string } }) {
+export default async function Education(props) {
+  const params = await props.params;
   const education = getEducationInfo().find((p) => p.slug === params.slug)
   if (!education) notFound()
 

@@ -54,17 +54,27 @@ export default function RootLayout({
     >
       <body className="antialiased min-h-screen">
         <main className="flex-auto min-w-0 flex flex-col">
-          {/* Green Header */}
-      <header className="w-full bg-green-600 py-8 md:py-8 shadow-md">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white">
-            Welcome to Muying Personal Website
-          </h1>
-          <p className="mt-4 text-lg text-green-100 max-w-2xl mx-auto">
-            Passionate about creating amazing things
-          </p>
-        </div>
-      </header>
+        <header className="w-full relative py-8 md:py-24 shadow-md overflow-hidden">
+  {/* Background image with overlay */}
+  <div className="absolute inset-0 z-0">
+    <img 
+      src="https://kinorotterdam.nl/content/uploads/2023/10/1035364-giveaway-win-free-tickets-see-studio-ghiblis-castle-sky-1798x640.jpg" 
+      alt="Abstract green background"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 opacity-70"></div>
+  </div>
+  
+  {/* Content container */}
+  <div className="container relative z-10 mx-auto px-4 text-center">
+    <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white drop-shadow-lg">
+      Welcome to Muying Personal Website
+    </h1>
+    <p className="mt-4 text-lg text-green-100 max-w-2xl mx-auto drop-shadow-md">
+      Passionate about creating amazing things
+    </p>
+  </div>
+</header>
           <Navbar />
           <div className="mx-auto w-full px-16">
           {children}

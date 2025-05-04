@@ -16,7 +16,7 @@ export default function Page() {
         </div>
         
         {/* Text Section - Enhanced Styling */}
-<div className="w-full md:w-7/8 pt-8 space-y-6">
+<div className="w-full md:w-1/2 pt-8 space-y-6">
   <div className="mb-6">
     <p className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white tracking-tight">
       Muying Zhao
@@ -40,6 +40,36 @@ export default function Page() {
     <div className="absolute -left-1.5 top-2.5 w-4 h-4 bg-green-500 rounded-full"></div>
   </div>
 </div>
+
+
+<div className="flex flex-col w-full md:w-3/8 md:flex-column gap-8 pt-4 items-start">
+  <div className="text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-blue-400 dark:border-indigo-500">
+    <h3 className="font-bold text-blue-600 dark:text-blue-300 mb-4 flex items-center">
+      <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      Professional Certifications
+    </h3>
+    
+    <div className="space-y-4">
+      <div className="flex items-start">
+        <span className="text-blue-500 dark:text-blue-400 mr-2 mt-1">•</span>
+        <p className="flex-1">
+          <span className="font-semibold text-gray-800 dark:text-gray-100">AWS Certified Solutions Architect - Associate</span>
+          <span className="block text-sm text-gray-600 dark:text-gray-400 mt-1">(EC2, S3, CloudFormation, Lambda)</span>
+        </p>
+      </div>
+      
+      <div className="flex items-start">
+        <span className="text-blue-500 dark:text-blue-400 mr-2 mt-1">•</span>
+        <p className="flex-1">
+          <span className="font-semibold text-gray-800 dark:text-gray-100">Microsoft Certified: Power BI Data Analyst Associate</span>
+          <span className="block text-sm text-gray-600 dark:text-gray-400 mt-1">(PowerBI, Power Automate, Excel)</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
       
 <div className="flex flex-col md:flex-row gap-8 pt-6 items-start">
@@ -49,7 +79,9 @@ export default function Page() {
       Aspiring <span className="font-semibold text-green-600 dark:text-green-400">Software Developer</span> with a strong foundation in <span className="font-medium">full-stack development</span>, <span className="font-medium">data engineering</span>, and <span className="font-medium">machine learning</span>. Experienced in building scalable systems, designing ETL pipelines, and developing interactive web applications. Skilled in <span className="text-green-600 dark:text-green-400 font-medium">Python</span>, <span className="text-green-600 dark:text-green-400 font-medium">Java</span>, <span className="text-green-600 dark:text-green-400 font-medium">JavaScript</span>, <span className="text-green-600 dark:text-green-400 font-medium">SQL</span>, and cloud technologies (<span className="font-medium">AWS</span>, <span className="font-medium">Huawei Cloud</span>). Passionate about writing clean, efficient code and solving complex problems through software developing and engineering.
     </p>
   </div>
+  
 </div>
+
 
     </section>
   )

@@ -11,7 +11,14 @@ export default function Page() {
             width={1080}
             height={1920}
             alt="Portfolio image of me"
-            className="w-full h-auto rounded-full aspect-square object-cover"
+            className="hidden md:block w-full h-auto rounded-full aspect-square object-cover"
+          />
+          <Image
+            src="/my-photo.jpg"
+            width={560}
+            height={560}
+            alt="Portfolio image of me"
+            className="block md:hidden w-full h-auto rounded-full aspect-square object-cover"
           />
         </div>
         

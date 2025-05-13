@@ -71,7 +71,7 @@ export default function Page() {
         <span className="text-blue-500 dark:text-blue-400 mr-2 mt-1">•</span>
         <p className="flex-1">
           <span className="font-semibold text-gray-800 dark:text-gray-100">Microsoft Certified: Power BI Data Analyst Associate</span>
-          <span className="block text-sm text-gray-600 dark:text-gray-400 mt-1">(PowerBI, Power Automate, Excel)</span>
+          <span className="block text-sm text-gray-600 dark:text-gray-400 mt-1">(PowerBI, Power Automate, SQL, Excel)</span>
         </p>
       </div>
     </div>
@@ -83,7 +83,16 @@ export default function Page() {
   <div className="relative w-full">
     <p className="text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
       <span className="absolute -left-2 top-0 h-full w-1 bg-gradient-to-b from-green-400 to-green-600 rounded-full"></span>
-      Aspiring <span className="font-semibold text-green-600 dark:text-green-400">Software Developer</span> with a strong foundation in <span className="font-medium">full-stack development</span>, <span className="font-medium">data engineering</span>, and <span className="font-medium">machine learning</span>. Experienced in building scalable systems, designing ETL pipelines, and developing interactive web applications. Skilled in <span className="text-green-600 dark:text-green-400 font-medium">Python</span>, <span className="text-green-600 dark:text-green-400 font-medium">Java</span>, <span className="text-green-600 dark:text-green-400 font-medium">JavaScript</span>, <span className="text-green-600 dark:text-green-400 font-medium">SQL</span>, and cloud technologies (<span className="font-medium">AWS</span>, <span className="font-medium">Huawei Cloud</span>). Passionate about writing clean, efficient code and solving complex problems through software developing and engineering.
+      Recent Master’s graduate in <span className="font-semibold text-green-600 dark:text-green-400">Health Data Science</span> with a strong foundation in <span className="font-semibold text-green-600 dark:text-green-400">Computer Science</span>. Proficient in <span className="font-semibold text-green-600 dark:text-green-400">Python, R, JavaScript, multiple development tools Git and Kanban</span>, and data tools <span className="font-semibold text-green-600 dark:text-green-400">Power BI, SQL and Tableau</span>.
+      Familiar with <span className="font-semibold text-green-600 dark:text-green-400">Cloud Platform AWS, docker, and Kafka</span>.
+      </p>
+      <p className="text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+      I have built 3 projects in Data Analysis(2 years), using R, SQL, Excel, Tableau, and Power BI(Certified), and I also have Intern and Project experience in Software Developing(3 years), using Git, Python(Flask), JaveScript, docker, CSS/HTML, Next.JS and Kanban. In addition, I also explore Machine Learning technologies and data pipeline (4 years) through research and projects, including Pandas, NumPy, Tensorflow, PyTorch, and Scikit-Learn. 
+      </p>
+      <p className="text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+      My Greatest Strength is <span className="font-semibold text-green-600 dark:text-green-400">learning technologies quickly(I love it!!!), adaptability and collaboration</span>, and I have a <span className="font-semibold text-green-600 dark:text-green-400">natural analytical mind for everything and also a Lego builder to add bricks</span>.
+      I am very passionate about using my technologies in real world to provide solutions, whether it is data-driven decision-making or building a full-stack project, I hope that my work can make the world a little bit better.
+      And most importantly, I value having fun and being <span className="font-semibold text-green-600 dark:text-green-400">collaborative, inclusive, and proactive</span> while I do it!
     </p>
   </div>
   

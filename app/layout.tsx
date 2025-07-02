@@ -66,7 +66,7 @@ export default function RootLayout({
   {/* Content container */}
   <div className="container relative z-10 mx-auto px-4 text-center">
     <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white drop-shadow-lg">
-      Welcome to Muying Personal Website
+      Welcome to Milly Personal Website
     </h1>
     <p className="mt-4 text-lg text-green-100 max-w-2xl mx-auto drop-shadow-md">
       Passionate about creating amazing things

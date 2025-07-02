@@ -26,7 +26,7 @@ export default function Page() {
 <div className="w-full md:w-1/2 pt-8 space-y-6">
   <div className="mb-6">
     <p className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white tracking-tight">
-      Muying Zhao
+      Milly Muying Zhao
     </p>
     <div className="w-16 h-1 bg-green-600 rounded-full mt-2"></div>
   </div>
